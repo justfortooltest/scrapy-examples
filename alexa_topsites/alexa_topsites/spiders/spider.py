@@ -46,8 +46,9 @@ class alexa_topsitesSpider(CommonSpider):
 
     def parse_1(self, response):
         info('Parse '+response.url)
-        x = self.parse_with_rules(response, self.list_css_rules, dict)
+        x = self.parse_with_rules(response, self.list_css_rules, alexa_topsitesItem)
         # x = self.parse_with_rules(response, self.content_css_rules, dict)
         print(json.dumps(x, ensure_ascii=False, indent=2))
         # pp.pprint(x)
-        # return self.parse_with_rules(response, self.css_rules, alexa_topsitesItem)
+        return self.parse_with_rules(response, self.list_css_rules, alexa_topsitesItem)
+        # return x

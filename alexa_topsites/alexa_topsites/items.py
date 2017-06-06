@@ -8,4 +8,6 @@ from scrapy.item import Item, Field
 class alexa_topsitesItem(Item):
     # define the fields for your item here like:
     name = Field()
+    rank = Field()
+    desc = Field()
 

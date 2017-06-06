@@ -31,6 +31,7 @@ ITEM_PIPELINES = {
     #'alexa_topsites.pipelines.RedisPipeline': 301,
 }
 
-LOG_LEVEL = 'INFO'
 
-DOWNLOAD_DELAY = 1
+LOG_LEVEL = 'DEBUG'
+DOWNLOAD_DELAY = 3
+ROBOTSTXT_OBEY = False
